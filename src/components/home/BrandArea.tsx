@@ -30,7 +30,7 @@ export default function BrandArea() {
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
-              <h2>Company I Worked With</h2>
+              <h2>What I Work With</h2>
               <div className="company-list">
                 <div className="scroller" data-direction="left" data-speed="slow">
                   <div className="scroller__inner">

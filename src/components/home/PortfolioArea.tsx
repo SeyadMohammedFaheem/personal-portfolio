@@ -74,11 +74,11 @@ export default function PortfolioArea() {
     <>
 
       <div className="projects-area" id="portfolio">
-        <div className="custom-icon">
+        <div className="custom-icon ">
           <img src="assets/images/custom/work-scribble.svg" alt="custom" />
         </div>
-        <div className="container-fluid">
-          <div className="row g-4 portfolio-grid">
+        <div className="container-fluid py-40">
+          <div className="row g-4 portfolio-grid p-40">
             {portfolio_data.map((item, i) => (
               <div key={i} className={`col-md-6 col-xl-${item.col} portfolio-item category-1`}>
                 <a
