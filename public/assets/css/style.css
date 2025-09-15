@@ -1240,6 +1240,10 @@ html {
     color: var(--main-color);
 }
 
+.hero-content-right p {
+    color: var(--main-color);
+}
+
 .hero-btns {
     margin-top: 30px;
 }

@@ -15,24 +15,9 @@ export default function HeroArea() {
           </div>
           <div className="row">
             <div className="col-lg-3 pt-30">
-
-              <div className="hero-content wow fadeInUp delay-0-2s">
-                <div className="clienti-reviews">
-                  <ul className="clienti-profile">
-                    <li>
-                      <img className="img-fluid" src="assets/images/avatar/01.jpg" alt="client" />
-                    </li>
-                    <li>
-                      <img className="img-fluid" src="assets/images/avatar/02.jpg" alt="client" />
-                    </li>
-                    <li>
-                      <img className="img-fluid" src="assets/images/avatar/03.jpg" alt="client" />
-                    </li>
-                  </ul>
-                  <div className="reviews">100+ reviews <span>(4.96 of 5)</span>
-                    <p>Five-star reviews from my esteemed clients.</p>
-                  </div>
-                </div>
+              <div className="hero-content wow fadeInUp delay-0-4s">
+                <p>Hi, I’m Faheem, a passionate UX Designer dedicated to creating user-friendly digital experiences.</p>
+                <a className="theme-btn" href="">Get In touch</a>
               </div>
 
             </div>
@@ -43,9 +28,15 @@ export default function HeroArea() {
 
             </div>
             <div className="col-lg-3 pt-30">
-              <div className="hero-content wow fadeInUp delay-0-4s">
-                <p>Hi, I’m Faheem, a passionate UX Designer dedicated to creating user-friendly digital experiences.</p>
-                <a className="theme-btn" href="">Get In touch</a>
+<div className="hero-content wow fadeInUp delay-0-4s" style={{ textAlign: "right" }}>
+                <p>As a Product Designer, I specialise in:</p>
+                <ul style={{ color: "black" }}>
+                  <li>UI/UX Design & Product Design</li>
+                  <li>User Research & Analysis</li>
+                  <li>Design Systems & Design Tokens</li>
+                  <li>Graphic Design & Branding</li>
+                    <li>Illustration & Interaction Design</li>
+                </ul>
               </div>
 
             </div>
