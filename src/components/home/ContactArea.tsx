@@ -1,19 +1,47 @@
- 
-import  { useState } from 'react'
+import { useState } from 'react'
 
 export default function ContactArea() {
-
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
-    // Add form submission logic here
-    console.log('Form submitted:', { name, email, subject, message });
-  };
+    setLoading(true);
+    setSuccess(false);
+    setError(false);
 
+    const formData = { name, email, subject, message };
+
+    try {
+      const res = await fetch(
+        "https://script.google.com/macros/s/AKfycbyFF5WEg5PcK2vjx28z1R2_dRWWhPlulnHfT0Tw6YvvWEkxYrxIDK4hdSZN1N-lBi0rvg/exec",
+        {
+          method: "POST",
+          body: JSON.stringify(formData),
+        }
+      );
+
+      if (res.ok) {
+        setSuccess(true);
+        setName('');
+        setEmail('');
+        setSubject('');
+        setMessage('');
+      } else {
+        setError(true);
+      }
+    } catch (err) {
+      console.error(err);
+      setError(true);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <>
@@ -27,36 +55,24 @@ export default function ContactArea() {
             </div>
           </div>
           <div className="row">
+            {/* Left side info */}
             <div className="col-lg-4">
-              <div className="contact-content-part  wow fadeInUp delay-0-2s">
-
+              <div className="contact-content-part wow fadeInUp delay-0-2s">
                 <div className="single-contact wow fadeInUp" data-wow-delay=".2s">
-                  <span className="circle-btn">
-                    <i className="ri-map-pin-line"></i>
-                  </span>
-                  <h2>our office:</h2>
-                  <p>Jurain,Dhaka Bangladesh</p>
+                  <span className="circle-btn"><i className="ri-map-pin-line"></i></span>
+                  <h2>My Location:</h2>
+                  <p>Bengaluru, Karnataka, India</p>
                 </div>
-
-
                 <div className="single-contact wow fadeInUp" data-wow-delay=".4s">
-                  <span className="circle-btn">
-                    <i className="ri-headphone-line"></i>
-                  </span>
-                  <h2>contact number:</h2>
-                  <p>+1234321321</p>
+                  <span className="circle-btn"><i className="ri-headphone-line"></i></span>
+                  <h2>Contact Number:</h2>
+                  <p>+91 6379439162</p>
                 </div>
-
-
                 <div className="single-contact wow fadeInUp" data-wow-delay=".6s">
-                  <span className="circle-btn">
-                    <i className="ri-mail-line"></i>
-                  </span>
-                  <h2>Email us:</h2>
-                  <p>websitename@mail.com</p>
+                  <span className="circle-btn"><i className="ri-mail-line"></i></span>
+                  <h2>Email Me:</h2>
+                  <p>faheemseyadmd@gmail.com</p>
                 </div>
-
-
                 <div className="single-contact wow fadeInUp" data-wow-delay=".6s">
                   <h2>Socials</h2>
                   <div className="about-social">
@@ -68,10 +84,10 @@ export default function ContactArea() {
                     </ul>
                   </div>
                 </div>
-
               </div>
-            </div> 
+            </div>
 
+            {/* Right side form */}
             <div className="col-lg-8">
               <div className="contact-form contact-form-area wow fadeInUp delay-0-4s">
                 <form id="contactForm" className="contact-form" onSubmit={handleSubmit}>
@@ -87,10 +103,8 @@ export default function ContactArea() {
                           onChange={(e) => setName(e.target.value)}
                           placeholder="Steve Milner"
                           required
-                          data-error="Please enter your Name"
                         />
                         <label htmlFor="name" className="for-icon"><i className="far fa-user"></i></label>
-                        <div className="help-block with-errors"></div>
                       </div>
                     </div>
                     <div className="col-md-6">
@@ -104,10 +118,8 @@ export default function ContactArea() {
                           onChange={(e) => setEmail(e.target.value)}
                           placeholder="hello@websitename.com"
                           required
-                          data-error="Please enter your Email"
                         />
                         <label htmlFor="email" className="for-icon"><i className="far fa-envelope"></i></label>
-                        <div className="help-block with-errors"></div>
                       </div>
                     </div>
                     <div className="col-md-12">
@@ -121,10 +133,8 @@ export default function ContactArea() {
                           onChange={(e) => setSubject(e.target.value)}
                           placeholder="Your Subject"
                           required
-                          data-error="Please enter your Subject"
                         />
                         <label htmlFor="subject" className="for-icon"><i className="far fa-user"></i></label>
-                        <div className="help-block with-errors"></div>
                       </div>
                     </div>
                     <div className="col-md-12">
@@ -139,22 +149,19 @@ export default function ContactArea() {
                           onChange={(e) => setMessage(e.target.value)}
                           placeholder="Write Your message"
                           required
-                          data-error="Please Write your Message"
                         ></textarea>
-                        <div className="help-block with-errors"></div>
                       </div>
                     </div>
                     <div className="col-md-12">
                       <div className="form-group mb-0">
-                        <button type="submit" className="theme-btn">
-                          Send Me Message <i className="ri-mail-line"></i>
+                        <button type="submit" className="theme-btn" disabled={loading}>
+                          {loading ? "Sending..." : "Send Me Message"} <i className="ri-mail-line"></i>
                         </button>
-                        <div id="msgSubmit" className="hidden"></div>
                       </div>
                     </div>
-                    <div className="col-md-12 text-center">
-                      <p className="input-success">We have received your mail, We will get back to you soon!</p>
-                      <p className="input-error">Sorry, Message could not send! Please try again.</p>
+                    <div className="col-md-12 text-center mt-3">
+                      {success && <p className="input-success">✅ Message sent successfully!</p>}
+                      {error && <p className="input-error">❌ Something went wrong. Please try again.</p>}
                     </div>
                   </div>
                 </form>
@@ -164,7 +171,6 @@ export default function ContactArea() {
           </div>
         </div>
       </section>
-
     </>
   )
 }

@@ -27,7 +27,7 @@ export default function BlogArea() {
             <div className="col-lg-6">
               <div className="blog-post-caption">
                 <h3>Posted on Aug 28</h3>
-                <h2><a className="link-decoration" href="#">Create a Landing Page That Performs Great</a></h2>
+                <h2><a className="link-decoration" href="#">Designing Accessible and Safe Destructive Actions</a></h2>
                 <a className="theme-btn theme-btn-two" href="#">Read more <i className="ri-arrow-right-line"></i></a>
               </div>
             </div>

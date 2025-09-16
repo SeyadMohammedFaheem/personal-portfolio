@@ -73,12 +73,14 @@ export default function PortfolioArea() {
   return (
     <>
 
-      <div className="projects-area" id="portfolio">
-        <div className="custom-icon ">
-          <img src="assets/images/custom/work-scribble.svg" alt="custom" />
-        </div>
-        <div className="container-fluid py-40">
-          <div className="row g-4 portfolio-grid p-40">
+      <div className="projects-area container" id="portfolio">
+        <div className="col-xl-12 col-lg-12">
+              <div className="section-title wow fadeInUp delay-0-2s">
+                <h2>Selected Works</h2>
+              </div>
+            </div>
+        <div className="container-fluid ">
+          <div className="row g-4 portfolio-grid ">
             {portfolio_data.map((item, i) => (
               <div key={i} className={`col-md-6 col-xl-${item.col} portfolio-item category-1`}>
                 <a

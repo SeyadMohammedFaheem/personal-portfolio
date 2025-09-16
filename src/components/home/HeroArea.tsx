@@ -7,14 +7,12 @@ export default function HeroArea() {
           <div className="row">
             <div className="col-lg-12">
 
-              <div className="hero-content wow fadeInUp text-center delay-0-2s">
-                <h2>Faheem.work</h2>
-              </div>
-
-            </div>
+              <div className="hero-content wow fadeInUp text-center delay-0-2s" style={{ paddingBottom: "20px" }}>
+                <h2>UI/UX Designer</h2></div>
+</div>
           </div>
           <div className="row">
-            <div className="col-lg-3 pt-30">
+            <div className="col-lg-3 pt-10">
               <div className="hero-content wow fadeInUp delay-0-4s">
                 <p>Hi, I’m Faheem, a passionate UX Designer dedicated to creating user-friendly digital experiences.</p>
                 <a className="theme-btn" href="">Get In touch</a>
@@ -27,7 +25,7 @@ export default function HeroArea() {
               </div>
 
             </div>
-            <div className="col-lg-3 pt-30">
+            <div className="col-lg-3 pt-10">
 <div className="hero-content wow fadeInUp delay-0-4s" style={{ textAlign: "right" }}>
                 <p>As a Product Designer, I specialise in:</p>
                 <ul style={{ color: "black" }}>

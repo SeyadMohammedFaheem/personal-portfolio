@@ -1224,7 +1224,9 @@ html {
 .main-hero-area {
     padding-top: 115px;
     background: var(--primary-color);
+    height: 100vh; /* full viewport height */
 }
+
 
 
 
