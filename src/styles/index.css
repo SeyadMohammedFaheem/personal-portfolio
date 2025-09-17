@@ -16,3 +16,30 @@
 @import "../../public/assets/css/bootstrap.min.css";
 @import "../../public/assets/css/style.css";
 @import "../../public/assets/css/responsive.css"; 
+
+/* Portfolio layout toggle */
+.portfolio-layout-toggle{display:flex;gap:8px}
+.portfolio-layout-toggle .toggle-btn{border:1px solid rgba(255,255,255,.15);background:transparent;color:inherit;padding:6px 10px;width:80px;border-radius:10px;font-weight:600}
+.portfolio-layout-toggle .toggle-btn.active{background:#ffffff;color:#111}
+
+/* Case list layout */
+.case-card{background:#1c1e1d;border-radius:28px;padding:36px 32px;box-shadow:0 12px 40px rgba(0,0,0,.25);transition:transform .25s ease, box-shadow .25s ease}
+.case-card:hover{transform:translateY(-2px);box-shadow:0 18px 50px rgba(0,0,0,.3)}
+.case-text .case-badge{letter-spacing:.08em;text-transform:uppercase;font-size:12px;opacity:.7;margin-bottom:10px}
+.case-title{font-weight:800;font-size:32px;line-height:1.2;margin:0 0 12px}
+.case-text .portfolio-caption h1{margin:0 0 12px}
+.case-desc{font-size:16px;color:#cfcfcf;opacity:1;margin:0 0 20px}
+.case-btn{background:#ffffff;color:#111;border:none;border-radius:12px;padding:10px 16px;font-weight:700;transition:background .2s ease, transform .2s ease}
+.case-btn:hover{background:#e9e9e9;transform:translateY(-1px)}
+.case-visual{position:relative;border-radius:24px;background:linear-gradient(135deg,#e0c2ff33,#ffc2d233);}
+.case-image{position:relative;border-radius:18px;overflow:hidden;background:#0b0f0e;width:100%;height:100%; max-width:800px;margin:0 auto}
+.case-image img{width:100%;height:100%;object-fit:cover;display:block;border-radius:18px}
+.case-cta{position:absolute;left:16px;top:16px;width:44px;height:44px;border-radius:999px;background:#1b1f1e;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,.3)}
+.case-cta i{font-size:18px}
+
+@media (max-width: 991.98px){
+  .case-card{padding:28px 22px}
+  .case-title, .case-text .portfolio-caption h1{font-size:28px}
+}
+
+/* Height scales automatically via aspect-ratio; no explicit overrides needed */
