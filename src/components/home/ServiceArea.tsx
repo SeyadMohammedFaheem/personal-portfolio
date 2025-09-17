@@ -8,7 +8,7 @@ export default function ServiceArea() {
           <div className="row">
             <div className="col-xl-12 col-lg-12">
               <div className="section-title section-black-title wow fadeInUp delay-0-2s">
-                <h2>Services</h2>
+                <h2>What I Do</h2>
               </div>
             </div>
           </div>
@@ -28,7 +28,7 @@ export default function ServiceArea() {
               <div className="service-item wow fadeInUp delay-0-4s">
                 <i className="ri-arrow-right-up-line"></i>
                 <h5>02</h5>
-                <h4>Visual Design</h4>
+                <h4>User Interface Design</h4>
                 <p>Blend of artistic intuition with strategic insight to craft a visual identity.</p>
               </div>
             </div>
