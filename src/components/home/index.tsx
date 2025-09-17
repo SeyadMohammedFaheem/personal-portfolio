@@ -23,9 +23,9 @@ export default function Home() {
             <HeroArea />
             <BrandArea />
             <AboutArea />
-            <PortfolioArea />
             <ServiceArea />
-            <TestimonoalArea />
+            <PortfolioArea />
+             <TestimonoalArea />
             <BlogArea />
             <ContactArea />
           </main>

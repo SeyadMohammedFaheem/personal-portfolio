@@ -115,7 +115,7 @@ export default function PortfolioArea() {
                       <img src={item.image} alt="" style={{ height: "auto"}} data-rjs="2" />
                       <span className="portfolio-category">{item.category}</span>
                       <div className="portfolio-caption">
-                        <h1>{item.title}</h1>
+                        <h1 className="case-title" style={{ textTransform: 'uppercase' }}>{item.title}</h1>
                       </div>
                     </div>
                   </a>
@@ -128,31 +128,23 @@ export default function PortfolioArea() {
         {layout === 'case' && (
           <div className="case-list">
             {portfolio_data.map((item, i) => (
-              <div key={i} className="case-card mb-4">
-                <div className="row align-items-center g-4">
-                  <div className="col-lg-5">
-                    <div className="case-visual">
-                      <div className="case-image">
-                        <a
-                          style={{ cursor: "pointer" }}
-                          onClick={() => handleImagePopup(i)}
-                          className="work-popup"
-                        >
-                          <img src={item.image} alt="" data-rjs="2" className="img-fluid" />
-                          <span className="case-cta"><i className="ri-arrow-right-up-line"></i></span>
-                        </a>
-                      </div>
+              <div key={i} className="row blog-post-box align-items-center mb-4">
+                <div className="col-lg-6">
+                  <div className="blog-post-img">
+                    <a href="#" onClick={() => handleImagePopup(i)}>
+                      <img src={item.image} alt="" />
+                    </a>
+                    <div className="blog-post-category">
+                      <a href="#">{item.category}</a>
                     </div>
                   </div>
-                  <div className="col-lg-7">
-                    <div className="case-text">
-                      <div className="case-badge">{item.category} • {item.year}</div>
-                      <div className="portfolio-caption">
-                        <h1>{item.title}</h1>
-                      </div>
-                      <p className="case-desc">{item.description}</p>
-                      <button className="case-btn">Read more</button>
-                    </div>
+                </div>
+                <div className="col-lg-6">
+                  <div className="blog-post-caption">
+                    <h3>Posted on {item.year ? item.year : ''}</h3>
+                    <h2><a className="link-decoration" href="#">{item.title}</a></h2>
+                    <p className="case-desc">{item.description}</p>
+                    <a className="theme-btn theme-btn-two" href="#">Read more <i className="ri-arrow-right-line"></i></a>
                   </div>
                 </div>
               </div>

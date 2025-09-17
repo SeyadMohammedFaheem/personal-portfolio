@@ -49,7 +49,7 @@ export default function TestimonoalArea() {
               </div>
 
             </div>
-            <div className="col-lg-4 col-md-6">
+            {/* <div className="col-lg-4 col-md-6">
 
               <div className="testimonial-item wow fadeInUp delay-0-6s">
                 <div className="author">
@@ -66,8 +66,8 @@ export default function TestimonoalArea() {
                 </div>
               </div>
 
-            </div>
-            <div className="col-lg-4 col-md-6">
+            </div> */}
+            {/* <div className="col-lg-4 col-md-6">
 
               <div className="testimonial-item wow fadeInUp delay-0-8s">
                 <div className="author">
@@ -84,8 +84,8 @@ export default function TestimonoalArea() {
                 </div>
               </div>
 
-            </div>
-            <div className="col-lg-4 col-md-6">
+            </div> */}
+            {/* <div className="col-lg-4 col-md-6">
 
               <div className="testimonial-item wow fadeInUp delay-0-9s">
                 <div className="author">
@@ -102,7 +102,7 @@ export default function TestimonoalArea() {
                 </div>
               </div>
 
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
