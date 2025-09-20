@@ -15,28 +15,31 @@ export default function ContactArea() {
     setSuccess(false);
     setError(false);
 
-    const formData = { name, email, subject, message };
+    const formData = new FormData();
+    formData.append("name", name);
+    formData.append("email", email);
+    formData.append("subject", subject);
+    formData.append("message", message);
 
     try {
       const res = await fetch(
-        "https://script.google.com/macros/s/AKfycbyFF5WEg5PcK2vjx28z1R2_dRWWhPlulnHfT0Tw6YvvWEkxYrxIDK4hdSZN1N-lBi0rvg/exec",
+        "https://script.google.com/macros/s/AKfycbwEntJNjNJiJOkShebDIQc6JL2v_60TXP6DzaLn-S6cYpN67HUX50newHfpVKN4GAEA/exec",
         {
           method: "POST",
-          body: JSON.stringify(formData),
+          body: formData,
         }
       );
 
       if (res.ok) {
         setSuccess(true);
-        setName('');
-        setEmail('');
-        setSubject('');
-        setMessage('');
+        setName("");
+        setEmail("");
+        setSubject("");
+        setMessage("");
       } else {
         setError(true);
       }
     } catch (err) {
-      console.error(err);
       setError(true);
     } finally {
       setLoading(false);
