@@ -15,7 +15,7 @@ export default function HeroArea() {
             <div className="col-lg-3 pt-10">
               <div className="hero-content wow fadeInUp delay-0-4s">
                 <p>Hi, I’m Faheem, a passionate UX Designer dedicated to creating user-friendly digital experiences.</p>
-                <a className="theme-btn" href="">Get In touch</a>
+                <a className="theme-btn" href="/assets/Resume - Faheem Product Designer.pdf" download target="_blank" rel="noopener noreferrer">View my Resume</a>
               </div>
 
             </div>
