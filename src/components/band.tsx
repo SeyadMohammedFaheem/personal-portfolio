@@ -126,7 +126,7 @@ export default function Band({ maxSpeed = 50, minSpeed = 10 }) {
       curve.points[1].copy(j2Lerped ?? j2.current.translation());
       curve.points[2].copy(j1Lerped ?? j1.current.translation());
       curve.points[3].copy(fixed.current.translation());
-  band.current.geometry.setPoints(curve.getPoints(128));
+      band.current.geometry.setPoints(curve.getPoints(32));
 
       ang.copy(card.current.angvel());
       rot.copy(card.current.rotation());
