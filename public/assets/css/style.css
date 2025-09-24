@@ -436,7 +436,9 @@ html {
     text-align: center;
     text-transform: none;
     -webkit-transition: .3s;
-    transition: .3s
+    transition: .3s;
+    z-index: 1000;
+    position: relative;
 }
 
 .theme-btn-two {
@@ -830,7 +832,7 @@ html {
 }
 
 .main-header .header-upper {
-    z-index: 5;
+    z-index: 500;
     width: 100%;
     position: fixed;
     -webkit-transition: all 500ms ease;
