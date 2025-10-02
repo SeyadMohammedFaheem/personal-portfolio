@@ -10,8 +10,10 @@ if (typeof global === 'undefined') {
   globalThis.global = globalThis
 }
 
-// ✅ Initialize Clarity with your project ID
-clarity.init('tixsyd61mb')
+// ✅ Only initialize Clarity in production
+if (import.meta.env.MODE === 'production') {
+  clarity.init('tixsyd61mb')
+}
 
 createRoot(document.getElementById('root')!).render(
   <>

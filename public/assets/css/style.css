@@ -437,6 +437,26 @@ html {
     text-transform: none;
     -webkit-transition: .3s;
     transition: .3s;
+    position: relative;
+}
+
+.theme-btn-firstfold {
+    background: var(--main-color);
+    color: var(--white-color);
+    cursor: pointer;
+    display: inline-block;
+    border: 1px solid var(--button-border);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    margin: 0 5px 10px 0;
+    overflow: visible;
+    border-radius: 2px;
+    padding: 20px 34px;
+    text-align: center;
+    text-transform: none;
+    -webkit-transition: .3s;
+    transition: .3s;
     z-index: 1000;
     position: relative;
 }
