@@ -22,6 +22,7 @@ interface DataType {
   description?: string;
   year?: string;
   metrics?: MetricType[];
+  link?: string; // ✅ Added link
 }
 
 const portfolio_data: DataType[] = [
@@ -29,71 +30,76 @@ const portfolio_data: DataType[] = [
     id: 1,
     col: "6",
     image: portfolio_img_1,
-    title: "Octalume - Smart IoT Dashboard",
+    title: "Pickcel Dashboard Redesign",
     category: "Dashboard Design",
     description:
       "Quick UX improvements that increased clarity for first-time users and boosted engagement.",
-    year: "2024",
+    year: "2025",
     metrics: [
       { value: "40%", label: "Faster Onboarding" },
       { value: "25%", label: "Higher Engagement" },
     ],
+    link: "https://faheem.work/projects/pickcel-dashboard-redesign",
   },
   {
     id: 2,
     col: "6",
     image: portfolio_img_2,
-    title: "Gift Suggestion App",
+    title: "Pickcel GO App Design",
     category: "UX Case Study",
     description:
       "A modular component exploration to speed up design iterations.",
-    year: "2023",
+    year: "2024",
     metrics: [
       { value: "3x", label: "Faster Iterations" },
       { value: "20%", label: "Improved Usability" },
     ],
+    link: "https://faheem.work/projects/pickcel-go-app",
   },
   {
     id: 3,
     col: "4",
     image: portfolio_img_3,
-    title: "Scentropolis Perfume App",
-    category: "UX Case Study",
+    title: "Website Redesign",
+    category: "Website Study",
     description:
       "Motion study highlighting micro-interactions and delight moments.",
-    year: "2023",
+    year: "2025",
     metrics: [
       { value: "15%", label: "More Retention" },
       { value: "30%", label: "Better Conversion" },
     ],
+    link: "https://faheem.work/projects/website-redesign",
   },
   {
     id: 4,
     col: "4",
     image: portfolio_img_4,
-    title: "Fitness Tracking App",
-    category: "UX Case Study",
+    title: "Octalume - Smart IoT Dashboard",
+    category: "Dashboard Study",
     description:
       "Identity refresh exploring typography, color, and layout systems.",
-    year: "2022",
+    year: "2024",
     metrics: [
       { value: "50%", label: "UI Consistency" },
       { value: "18%", label: "Drop in Errors" },
     ],
+    link: "https://www.behance.net/gallery/213204745/Octalume-Smart-IoT-Dashboard-UIUX-Design",
   },
   {
     id: 5,
     col: "4",
     image: portfolio_img_5,
-    title: "Real Estate Website",
-    category: "Web Design",
+    title: "Scentropolis Perfume App",
+    category: "App Design",
     description:
       "Concept mockups for a data-dense analytics experience.",
-    year: "2022",
+    year: "2024",
     metrics: [
       { value: "25%", label: "Faster Load Time" },
       { value: "10%", label: "Higher Conversion" },
     ],
+    link: "https://faheem.work/projects/scentropolis-app",
   },
 ];
 
@@ -102,10 +108,7 @@ export default function PortfolioArea() {
   const [isOpen, setIsOpen] = useState(false);
   const [layout, setLayout] = useState<"grid" | "case">("case");
 
-  const handleImagePopup = (i: number) => {
-    setPhotoIndex(i);
-    setIsOpen(true);
-  };
+
 
   const image = portfolio_data.slice(0, 5).map((item) => item.image);
 
@@ -142,8 +145,9 @@ export default function PortfolioArea() {
                   className={`col-md-6 col-xl-${item.col} portfolio-item category-1`}
                 >
                   <a
-                    style={{ cursor: "pointer" }}
-                    onClick={() => handleImagePopup(i)}
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="work-popup"
                   >
                     <div className="portfolio-box">
@@ -183,11 +187,21 @@ export default function PortfolioArea() {
                 {/* LEFT IMAGE */}
                 <div className="col-lg-6">
                   <div className="blog-post-img">
-                    <a href="#" onClick={() => handleImagePopup(i)}>
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <img src={item.image} alt={item.title} />
                     </a>
                     <div className="blog-post-category">
-                      <a href="#">{item.category}</a>
+                      <a
+                        href={item.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {item.category}
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -197,14 +211,19 @@ export default function PortfolioArea() {
                   <div className="blog-post-caption">
                     <h3>{item.year ? `Posted on ${item.year}` : ""}</h3>
                     <h2>
-                      <a className="link-decoration" href="#">
+                      <a
+                        className="link-decoration"
+                        href={item.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         {item.title}
                       </a>
                     </h2>
                     <p className="case-desc">{item.description}</p>
 
                     {/* Metrics Section */}
-                    {item.metrics && (
+                    {/* {item.metrics && (
                       <div className="d-flex flex-wrap gap-4 my-3">
                         {item.metrics.map((metric, idx) => (
                           <div key={idx}>
@@ -215,10 +234,15 @@ export default function PortfolioArea() {
                           </div>
                         ))}
                       </div>
-                    )}
+                    )} */}
 
                     {/* Button */}
-                    <a className="theme-btn theme-btn-two" href="#">
+                    <a
+                      className="theme-btn theme-btn-two"
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       View Project <i className="ri-arrow-right-line"></i>
                     </a>
                   </div>

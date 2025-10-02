@@ -24,7 +24,7 @@ export default function HeroArea() {
     user-friendly digital experiences.
   </p>
   <a
-    className="theme-btn"
+    className="theme-btn-firstfold"
     href="/assets/Resume - Faheem Product Designer.pdf"
     download
     target="_blank"
