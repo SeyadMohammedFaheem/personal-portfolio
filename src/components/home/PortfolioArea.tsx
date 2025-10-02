@@ -99,7 +99,7 @@ const portfolio_data: DataType[] = [
       { value: "25%", label: "Faster Load Time" },
       { value: "10%", label: "Higher Conversion" },
     ],
-    link: "https://www.behance.net/gallery/181399267/Scentropolis-UIUX-Mobile-App-Perfume-App-Design",
+    link: "https://faheem.work/projects/scentropolis-app",
   },
 ];
 
@@ -108,10 +108,7 @@ export default function PortfolioArea() {
   const [isOpen, setIsOpen] = useState(false);
   const [layout, setLayout] = useState<"grid" | "case">("case");
 
-  const handleImagePopup = (i: number) => {
-    setPhotoIndex(i);
-    setIsOpen(true);
-  };
+
 
   const image = portfolio_data.slice(0, 5).map((item) => item.image);
 
