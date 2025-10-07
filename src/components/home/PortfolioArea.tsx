@@ -39,7 +39,7 @@ const portfolio_data: DataType[] = [
       { value: "40%", label: "Faster Onboarding" },
       { value: "25%", label: "Higher Engagement" },
     ],
-    link: "https://faheem.work/projects/pickcel-dashboard-redesign",
+    link: "https://www.figma.com/proto/9BZN4coiFEEWlCk9zNsZIc/Console-UI-Redesign---Navigation-Optimization?page-id=0%3A1&node-id=0-1827&viewport=138%2C117%2C0.11&t=O2jBYAxOL7NcRWek-1&scaling=contain&content-scaling=fixed",
   },
   {
     id: 2,
@@ -99,7 +99,7 @@ const portfolio_data: DataType[] = [
       { value: "25%", label: "Faster Load Time" },
       { value: "10%", label: "Higher Conversion" },
     ],
-    link: "https://faheem.work/projects/scentropolis-app",
+    link: "https://www.behance.net/gallery/181399267/Scentropolis-UIUX-Mobile-App-Perfume-App-Design",
   },
 ];
 
