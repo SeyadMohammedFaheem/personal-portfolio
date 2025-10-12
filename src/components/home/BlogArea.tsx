@@ -31,7 +31,7 @@ export default function BlogArea() {
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 mb-4">
+            {/* <div className="col-lg-4 mb-4">
               <div className="blog-card">
                 <div className="blog-post-img">
                   <a href="#">
@@ -64,7 +64,7 @@ export default function BlogArea() {
                   <a className="theme-btn theme-btn-two" href="#">Read more <i className="ri-arrow-right-line"></i></a>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
         </div>
