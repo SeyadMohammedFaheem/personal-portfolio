@@ -33,6 +33,7 @@ export default defineConfig({
     outDir: 'dist',
     assetsInlineLimit: 4096, // Inline very small images
     rollupOptions: {
+          input: '/index.html', // ✅ ensures query params like ?utm are preserved
       output: {
         // 👇 Always rewrite image extensions to .webp in production
         assetFileNames: (assetInfo) => {
