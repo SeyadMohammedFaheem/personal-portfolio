@@ -54,7 +54,7 @@ const portfolio_data: DataType[] = [
       { value: "3x", label: "Faster Iterations" },
       { value: "20%", label: "Improved Usability" },
     ],
-    link: "https://faheem.work/projects/pickcel-go-app",
+    link: "https://www.figma.com/proto/RJ1wtC2LyGH9TNR1lPzRRi/Portfolio-FInal?page-id=247%3A2463&node-id=247-2464&scaling=min-zoom&content-scaling=fixed&t=zJAFUzafUpJ6HWYV-1&hide-ui=1",
   },
   {
     id: 3,
