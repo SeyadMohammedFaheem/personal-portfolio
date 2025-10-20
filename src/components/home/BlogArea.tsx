@@ -27,7 +27,7 @@ export default function BlogArea() {
                 <div className="blog-post-caption">
                   <h3>Posted on Aug 28</h3>
                   <h2><a className="link-decoration" href="#">Designing Accessible and Safe Destructive Actions</a></h2>
-                  <a className="theme-btn theme-btn-two" href="#">Read more <i className="ri-arrow-right-line"></i></a>
+                  <a className="theme-btn theme-btn-two" href="https://dot-hellebore-d25.notion.site/Delete-Button-Case-Study-1e84f82a535380868c4add0893205489">Read more <i className="ri-arrow-right-line"></i></a>
                 </div>
               </div>
             </div>
