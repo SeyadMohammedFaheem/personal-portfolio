@@ -4,8 +4,8 @@ import BrandArea from './BrandArea'
 import AboutArea from './AboutArea'
 import ServiceArea from './ServiceArea' 
 import PortfolioArea from './PortfolioArea'
-// import TestimonoalArea from './TestimonoalArea'
-// import BlogArea from './BlogArea'
+import TestimonoalArea from './TestimonoalArea'
+import BlogArea from './BlogArea'
 import ContactArea from './ContactArea' 
 import HeaderOne from '../../layouts/headers/HeaderOne'
 import FooterOne from '../../layouts/footers/FooterOne'
@@ -25,8 +25,8 @@ export default function Home() {
             <AboutArea />
             <ServiceArea />
             <PortfolioArea />
-             {/* <TestimonoalArea /> */}
-            {/* <BlogArea /> */}
+             <TestimonoalArea />
+            <BlogArea />
             <ContactArea />
           </main>
           <FooterOne />
