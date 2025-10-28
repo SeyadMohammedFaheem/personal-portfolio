@@ -21,6 +21,7 @@ interface DataType {
   category: string;
   description?: string;
   year?: string;
+   live?: string
   metrics?: MetricType[];
   link?: string; // ✅ Added link
 }
@@ -40,6 +41,8 @@ const portfolio_data: DataType[] = [
       { value: "25%", label: "Higher Engagement" },
     ],
     link: "https://www.figma.com/proto/9BZN4coiFEEWlCk9zNsZIc/Console-UI-Redesign---Navigation-Optimization?page-id=0%3A1&node-id=0-1827&viewport=138%2C117%2C0.11&t=O2jBYAxOL7NcRWek-1&scaling=contain&content-scaling=fixed",
+      live: "https://console.pickcel.com#/"   // ✅ added live site link
+
   },
   {
     id: 2,
@@ -55,6 +58,7 @@ const portfolio_data: DataType[] = [
       { value: "20%", label: "Improved Usability" },
     ],
     link: "https://www.figma.com/proto/RJ1wtC2LyGH9TNR1lPzRRi/Portfolio-FInal?page-id=247%3A2463&node-id=247-2464&scaling=min-zoom&content-scaling=fixed&t=zJAFUzafUpJ6HWYV-1&hide-ui=1",
+  live: "https://console.pickcel.com#/"   // ✅ added live site link
   },
   {
     id: 3,
@@ -70,6 +74,7 @@ const portfolio_data: DataType[] = [
       { value: "30%", label: "Better Conversion" },
     ],
     link: "https://faheem.work/projects/website-redesign",
+    live: "https://console.pickcel.com#/"   // ✅ added live site link
   },
   {
     id: 4,
@@ -85,6 +90,7 @@ const portfolio_data: DataType[] = [
       { value: "18%", label: "Drop in Errors" },
     ],
     link: "https://www.behance.net/gallery/213204745/Octalume-Smart-IoT-Dashboard-UIUX-Design",
+    live: "https://console.pickcel.com#/"   // ✅ added live site link
   },
   {
     id: 5,
@@ -100,6 +106,7 @@ const portfolio_data: DataType[] = [
       { value: "10%", label: "Higher Conversion" },
     ],
     link: "https://www.behance.net/gallery/181399267/Scentropolis-UIUX-Mobile-App-Perfume-App-Design",
+    live: "https://console.pickcel.com#/"   // ✅ added live site link
   },
 ];
 
@@ -243,8 +250,26 @@ export default function PortfolioArea() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      View Project <i className="ri-arrow-right-line"></i>
+                      Read Case study <i className="ri-arrow-right-line"></i>
                     </a>
+                       {item.live && (
+   <a
+  href={item.live}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="ms-3 theme-btn theme-btn-two"
+  style={{
+    background: "transparent",
+    color: "var(--primary-color)",
+    border: "none",
+    textDecoration: "none",
+  }}
+  onMouseEnter={(e) => (e.currentTarget.style.textDecoration = "underline")}
+  onMouseLeave={(e) => (e.currentTarget.style.textDecoration = "none")}
+>
+  View Live Site
+</a>
+  )}
                   </div>
                 </div>
               </div>
