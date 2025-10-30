@@ -58,7 +58,6 @@ const portfolio_data: DataType[] = [
       { value: "20%", label: "Improved Usability" },
     ],
     link: "https://www.figma.com/proto/RJ1wtC2LyGH9TNR1lPzRRi/Portfolio-FInal?page-id=247%3A2463&node-id=247-2464&scaling=min-zoom&content-scaling=fixed&t=zJAFUzafUpJ6HWYV-1&hide-ui=1",
-  live: "https://console.pickcel.com#/"   // ✅ added live site link
   },
   {
     id: 3,
@@ -74,7 +73,7 @@ const portfolio_data: DataType[] = [
       { value: "30%", label: "Better Conversion" },
     ],
     link: "https://faheem.work/projects/website-redesign",
-    live: "https://console.pickcel.com#/"   // ✅ added live site link
+    live: "https://pickcel.com#/"   // ✅ added live site link
   },
   {
     id: 4,
@@ -90,7 +89,7 @@ const portfolio_data: DataType[] = [
       { value: "18%", label: "Drop in Errors" },
     ],
     link: "https://www.behance.net/gallery/213204745/Octalume-Smart-IoT-Dashboard-UIUX-Design",
-    live: "https://console.pickcel.com#/"   // ✅ added live site link
+    live: "https://seyadmohammedfaheem.github.io/octalume/"   // ✅ added live site link
   },
   {
     id: 5,
@@ -106,7 +105,6 @@ const portfolio_data: DataType[] = [
       { value: "10%", label: "Higher Conversion" },
     ],
     link: "https://www.behance.net/gallery/181399267/Scentropolis-UIUX-Mobile-App-Perfume-App-Design",
-    live: "https://console.pickcel.com#/"   // ✅ added live site link
   },
 ];
 
