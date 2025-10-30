@@ -79,12 +79,42 @@ export default function ContactArea() {
                 <div className="single-contact wow fadeInUp" data-wow-delay=".6s">
                   <h2>Socials</h2>
                   <div className="about-social">
-                    <ul>
-                      <li><a target='_blank' href="https://facebook.com"><i className="ri-facebook-circle-fill"></i></a></li>
-                      <li><a target='_blank' href="https://twitter.com"><i className="ri-twitter-x-line"></i></a></li>
-                      <li><a target='_blank' href="https://linkedin.com"><i className="ri-linkedin-fill"></i></a></li>
-                      <li><a target='_blank' href="https://github.com/jamilrayhan10"><i className="ri-github-line"></i></a></li>
-                    </ul>
+                   <ul className="flex items-center gap-4">
+  <li>
+    <a
+      href="https://www.behance.net/faheemseyadmd"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Behance"
+      className="hover:text-[#1769FF] transition-colors"
+    >
+      <i className="ri-behance-fill text-xl"></i>
+    </a>
+  </li>
+  <li>
+    <a
+      href="https://www.linkedin.com/in/seyad-mohammed-faheem/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="LinkedIn"
+      className="hover:text-[#0A66C2] transition-colors"
+    >
+      <i className="ri-linkedin-fill text-xl"></i>
+    </a>
+  </li>
+  <li>
+    <a
+      href="https://dribbble.com/faheemmeehaf"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Dribbble"
+      className="hover:text-[#EA4C89] transition-colors"
+    >
+      <i className="ri-dribbble-fill text-xl"></i>
+    </a>
+  </li>
+</ul>
+
                   </div>
                 </div>
               </div>

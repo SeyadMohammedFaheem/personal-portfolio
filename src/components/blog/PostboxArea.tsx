@@ -17,87 +17,89 @@ export default function PostboxArea({setIsVideoOpen}: any) {
               <div className="postbox__wrapper">
                 <article className="postbox__item format-image mb-50 transition-3">
                   <div className="postbox__thumb w-img">
-                    <Link to="/blog-details">
-                      <img src="assets/images/blog/blog1.jpg" alt="" />
+                    <Link to="/blog-post-1">
+                      <img src="assets/images/blog/blog1.jpg" alt="Designing Accessible Destructive Actions" />
                     </Link>
                   </div>
                   <div className="postbox__content">
                     <div className="postbox__meta">
                       <span>
-                        <a href=""><i className="fa-light fa-user"></i>Tanvir Hossain</a>
+                        <a href=""><i className="fa-light fa-user"></i>Faheem Ahmed</a>
                       </span>
                       <span>
-                        <a href=""><i className="fa-light fa-clock"></i>January 22, 2022</a>
+                        <a href=""><i className="fa-light fa-clock"></i>August 28, 2024</a>
                       </span>
                       <span>
-                        <a href=""><i className="fa-sharp fa-thin fa-comments"></i>35</a>
+                        <a href=""><i className="fa-sharp fa-thin fa-comments"></i>12</a>
                       </span>
                     </div>
                     <h3 className="postbox__title">
-                      <Link to="/blog-details">Create a Landing Page That Performs Great</Link>
+                      <Link to="/blog-post-1">Designing Accessible and Safe Destructive Actions</Link>
                     </h3>
                     <div className="postbox__text">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat […]</p>
+                      <p>In modern web applications, destructive actions like deleting data, removing users, or clearing content are inevitable. However, these actions can have serious consequences if not handled properly. As designers, we have a responsibility to ensure these actions are both accessible and safe for all users.</p>
                     </div>
                     <div className="postbox__read-more">
-                      <Link to="/blog-details" className="theme-btn">Read more</Link>
+                      <Link to="/blog-post-1" className="theme-btn">Read more</Link>
                     </div>
                   </div>
                 </article>
                 <article className="postbox__item format-video mb-50 transition-3">
                   <div className="postbox__thumb postbox__video w-img p-relative">
-                    <Link to="/blog-details">
-                      <img src="assets/images/blog/blog2.jpg" alt="" />
+                    <Link to="/blog-post-2">
+                      <img src="assets/images/blog/blog2.jpg" alt="Building Tokenized Design System" />
                     </Link>
                     <a onClick={() => setIsVideoOpen(true)} style={{ cursor: "pointer" }} className="play-btn pulse-btn popup-video"><i className="fas fa-play"></i></a>
                   </div>
                   <div className="postbox__content">
                     <div className="postbox__meta">
                       <span>
-                        <a href=""><i className="fa-light fa-user"></i>Tanvir Hossain</a>
+                        <a href=""><i className="fa-light fa-user"></i>Faheem Ahmed</a>
                       </span>
                       <span>
-                        <a href=""><i className="fa-light fa-clock"></i>January 22, 2022</a>
+                        <a href=""><i className="fa-light fa-clock"></i>August 25, 2024</a>
                       </span>
                       <span>
-                        <a href=""><i className="fa-sharp fa-thin fa-comments"></i>35</a>
+                        <a href=""><i className="fa-sharp fa-thin fa-comments"></i>8</a>
                       </span>
                     </div>
                     <h3 className="postbox__title">
-                      <Link to="/blog-details">Starting and Growing a Career in Web Design</Link>
+                      <Link to="/blog-post-2">Building a Tokenized Design System for Cross-Platform UI</Link>
                     </h3>
                     <div className="postbox__text">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat […]</p>
+                      <p>In today's multi-platform world, maintaining design consistency across web, mobile, and desktop applications is more challenging than ever. A tokenized design system provides the foundation for scalable, maintainable, and consistent user interfaces across all platforms.</p>
                     </div>
                     <div className="postbox__read-more">
-                      <Link to="/blog-details" className="theme-btn">Read more</Link>
+                      <Link to="/blog-post-2" className="theme-btn">Read more</Link>
                     </div>
                   </div>
                 </article>
                 <article className="postbox__item format-audio mb-50 transition-3">
                   <div className="postbox__thumb postbox__audio w-img p-relative">
-                    <iframe allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/316547873&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                    <Link to="/blog-post-3">
+                      <img src="assets/images/blog/blog3.jpg" alt="Future of Design Systems" />
+                    </Link>
                   </div>
                   <div className="postbox__content">
                     <div className="postbox__meta">
                       <span>
-                        <a href=""><i className="fa-light fa-user"></i>Tanvir Hossain</a>
+                        <a href=""><i className="fa-light fa-user"></i>Faheem Ahmed</a>
                       </span>
                       <span>
-                        <a href=""><i className="fa-light fa-clock"></i>January 22, 2022</a>
+                        <a href=""><i className="fa-light fa-clock"></i>August 20, 2024</a>
                       </span>
                       <span>
-                        <a href=""><i className="fa-sharp fa-thin fa-comments"></i>35</a>
+                        <a href=""><i className="fa-sharp fa-thin fa-comments"></i>15</a>
                       </span>
                     </div>
                     <h3 className="postbox__title">
-                      <Link to="/blog-details">How Can Designers Prepare for the Future?</Link>
+                      <Link to="/blog-post-3">The Future of Design Systems: AI and Automation</Link>
                     </h3>
                     <div className="postbox__text">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat […]</p>
+                      <p>As we look toward the future of design systems, artificial intelligence and automation are emerging as transformative forces. These technologies promise to revolutionize how we create, maintain, and evolve design systems, making them more intelligent, adaptive, and efficient than ever before.</p>
                     </div>
                     <div className="postbox__read-more">
-                      <Link to="/blog-details" className="theme-btn">Read more</Link>
+                      <Link to="/blog-post-3" className="theme-btn">Read more</Link>
                     </div>
                   </div>
                 </article>

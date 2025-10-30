@@ -25,8 +25,8 @@ export default function Home() {
             <AboutArea />
             <ServiceArea />
             <PortfolioArea />
-             {/* <TestimonoalArea /> */}
-            {/* <BlogArea /> */}
+             {/* <TestimonoalArea />
+            <BlogArea /> */}
             <ContactArea />
           </main>
           <FooterOne />
