@@ -24,14 +24,13 @@ export default function HeroArea() {
     user-friendly digital experiences.
   </p>
   <a
-    className="theme-btn-firstfold"
-    href="/assets/Resume - Faheem Product Designer.pdf"
-    download
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    View my Resume
-  </a>
+  className="theme-btn-firstfold"
+  href="/assets/Resume - Faheem Product Designer.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  View Resume
+</a>
 </div>
 
   </div>
