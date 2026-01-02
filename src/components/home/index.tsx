@@ -4,15 +4,15 @@ import BrandArea from './BrandArea'
 import AboutArea from './AboutArea'
 import ServiceArea from './ServiceArea' 
 import PortfolioArea from './PortfolioArea'
-// import TestimonoalArea from './TestimonoalArea'
-// import BlogArea from './BlogArea'
+import TestimonoalArea from './TestimonoalArea'
+import BlogArea from './BlogArea'
 import ContactArea from './ContactArea' 
 import HeaderOne from '../../layouts/headers/HeaderOne'
 import FooterOne from '../../layouts/footers/FooterOne'
 import ScrollTop from '../common/ScrollTop'
 import CustomCursor from '../common/CustomCursor'
 import ScrollToTop from '../common/ScrollToTop'
-
+import OtherWorks from './otherworks'
 export default function Home() {
   return (
     <>
@@ -25,8 +25,9 @@ export default function Home() {
             <AboutArea />
             <ServiceArea />
             <PortfolioArea />
-             {/* <TestimonoalArea />
-            <BlogArea /> */}
+            <OtherWorks />
+             <TestimonoalArea />
+            <BlogArea />
             <ContactArea />
           </main>
           <FooterOne />

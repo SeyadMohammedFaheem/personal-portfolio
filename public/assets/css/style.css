@@ -2975,12 +2975,13 @@ body.loaded {
 }
 
 .blog-post-caption {
-    padding-left: 0px;
+    padding: 25px;
+    margin-top: 20px;
 }
 
 .blog-post-caption h2 a {
     display: block;
-    padding: 10px 0px;
+    padding: 0px 0px;
     color: var(--white-color);
     font-family: var(--title-font);
     font-size: 40px;

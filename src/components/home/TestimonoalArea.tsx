@@ -20,20 +20,18 @@ export default function TestimonoalArea() {
                   <img src="assets/images/testimonials/author1.jpg" alt="Author" />
                 </div>
                 <div className="text">
-                  Financial planners help people to knowledge in about how to
-                  invest and in save their moneye the most efficient way eve plan
-                  ners help people tioniio know ledige in about how.
+                 Working with Faheem was effective. He quickly understands product constraints and turns them into clean,usable designs. His decisions are user and business driven, making him reliable on features.
                 </div>
                 <div className="testi-des">
-                  <h5>Zonathon Doe</h5>
-                  <span>CEO & Founder X</span>
+                  <h5>Jaseem P</h5>
+                  <span>Lead Designer</span>
                 </div>
               </div>
 
             </div>
             <div className="col-lg-6 col-md-6">
 
-              <div className="testimonial-item wow fadeInUp delay-0-4s">
+              {/* <div className="testimonial-item wow fadeInUp delay-0-4s">
                 <div className="author">
                   <img src="assets/images/testimonials/author2.jpg" alt="Author" />
                 </div>
@@ -46,7 +44,7 @@ export default function TestimonoalArea() {
                   <h5>Martin Smith</h5>
                   <span>CEO & Founder Google</span>
                 </div>
-              </div>
+              </div> */}
 
             </div>
             {/* <div className="col-lg-4 col-md-6">

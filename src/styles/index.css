@@ -43,3 +43,138 @@
 }
 
 /* Height scales automatically via aspect-ratio; no explicit overrides needed */
+
+.other-works-area .section-title{margin-bottom:36px}
+.other-works-area .title-sub{color:rgba(255,255,255,0.7);margin-top:8px}
+.otherwork-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:40px;overflow:hidden;transition:transform .28s ease, box-shadow .28s ease;border:1px solid rgba(255,255,255,0.04);box-shadow:0 30px 60px rgba(0,0,0,0.6)}
+.otherwork-card:hover{transform:translateY(-6px)}
+.otherwork-card .card-link{display:block;color:inherit;text-decoration:none}
+.otherwork-card .card-media{position:relative;overflow:hidden;height:320px;border-bottom:1px solid rgba(255,255,255,0.03)}
+.otherwork-card .card-media img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.otherwork-card:hover .card-media img{transform:scale(1.06)}
+.otherwork-card .card-overlay{position:absolute;left:16px;top:16px;right:16px;bottom:16px;display:flex;flex-direction:column;justify-content:space-between}
+.otherwork-card .badge{background:rgba(0,0,0,0.45);color:#fff;padding:6px 10px;border-radius:999px;font-weight:700;font-size:12px;align-self:flex-start}
+.otherwork-card .overlay-actions{align-self:flex-end;background:linear-gradient(135deg,#ffffff22,#ffffff11);width:44px;height:44px;border-radius:999px;display:flex;align-items:center;justify-content:center;color:#fff}
+.otherwork-card .overlay-actions i{font-size:18px}
+.otherwork-card .card-body{padding:22px}
+.otherwork-card .card-title{font-size:20px;margin:0 0 8px}
+.otherwork-card .card-desc{color:rgba(255,255,255,0.75);margin:0 0 14px}
+.otherwork-card .card-cta{display:inline-block;padding:8px 14px;border-radius:12px;background:rgba(255,255,255,0.06);color:#fff;font-weight:700}
+
+@media (max-width: 767.98px){
+  .otherwork-card .card-media{height:220px}
+  .otherwork-card .card-body{padding:16px}
+  .otherwork-card .card-title{font-size:18px}
+}
+
+.otherworks-card {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  overflow: hidden;
+  background: #000;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.otherworks-card:hover {
+  border-color: rgba(255, 255, 255, 0.28);
+  transform: translateY(-4px);
+}
+
+.otherworks-img img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+}
+
+.otherworks-content {
+  padding: 20px 22px 24px;
+}
+
+.otherworks-content h2 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.otherworks-content p {
+  font-size: 14px;
+  color: #b5b5b5;
+  line-height: 1.6;
+}
+
+
+/* Featured layout styles */
+.otherwork-feature .card-media{height:520px;border-radius:20px;overflow:hidden;position:relative}
+.otherwork-feature .card-media img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
+.otherwork-feature:hover .card-media img{transform:scale(1.03)}
+.otherwork-feature .card-overlay{position:absolute;left:24px;right:24px;top:24px;bottom:24px;display:flex;flex-direction:column;justify-content:space-between;color:#fff}
+.otherwork-feature .card-overlay h4{font-size:28px;margin:0 0 8px}
+.otherwork-feature .card-overlay p{opacity:0.95;margin:0 0 12px}
+.otherwork-feature .cta-row{display:flex;gap:12px;align-items:center}
+.otherwork-feature .tag{background:rgba(0,0,0,0.45);padding:8px 12px;border-radius:999px;font-weight:700}
+.otherwork-feature .cta-btn{background:#fff;color:#111;padding:8px 14px;border-radius:12px;font-weight:700}
+
+.otherwork-small .card-media{height:240px;border-radius:12px;overflow:hidden;position:relative}
+.otherwork-small .card-overlay.small{position:absolute;left:16px;top:16px;color:#fff;display:flex;flex-direction:column;gap:6px}
+.otherwork-small .card-overlay.small h4{font-size:18px;margin:0}
+.otherwork-small .card-overlay.small h5{background:rgba(255,255,255,0.08);padding:4px 8px;border-radius:6px;font-size:12px}
+.otherwork-small .card-body{padding:14px}
+
+@media (max-width: 991.98px){
+  .otherwork-feature .card-media{height:360px}
+  .otherwork-small .card-media{height:180px}
+}
+
+/* New duo-card styles */
+.duo-card{border-radius:48px;overflow:hidden;transition:transform .28s ease, box-shadow .28s ease;border:1px solid rgba(255,255,255,0.06);background:linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.25));box-shadow:0 40px 80px rgba(0,0,0,0.65)}
+.duo-card:hover{transform:translateY(-6px);box-shadow:0 50px 100px rgba(0,0,0,.6)}
+.duo-card .card-media{position:relative;height:520px;overflow:hidden;border-radius:40px;background:#0b0b0b}
+.duo-card .card-media img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease;border-radius:40px}
+.duo-card:hover .card-media img{transform:scale(1.04)}
+
+.duo-overlay{position:absolute;left:48px;right:48px;bottom:48px;color:#fff;display:flex;flex-direction:column;gap:16px;align-items:flex-start}
+.duo-overlay.small{bottom:28px;left:28px;right:28px}
+.duo-pretitle{font-size:12px;color:rgba(255,255,255,0.9);background:rgba(0,0,0,0.25);display:inline-block;padding:6px 12px;border-radius:12px;letter-spacing:.08em}
+.duo-title{font-size:36px;line-height:1.02;margin:0;font-weight:800}
+.duo-sub{color:rgba(160,190,210,0.85);margin:0;opacity:0.95}
+.duo-actions{display:flex;gap:14px;align-items:center;margin-top:12px}
+.duo-tag{background:rgba(255,255,255,0.06);padding:6px 10px;border-radius:999px;font-weight:700}
+.duo-cta{background:#fff;color:#111;padding:8px 12px;border-radius:10px;font-weight:700}
+
+.duo-card.compact .card-media{height:420px}
+
+@media (max-width: 991.98px){
+  .duo-card .card-media{height:260px}
+  .duo-card.compact .card-media{height:220px}
+  .duo-title{font-size:18px}
+}
+
+
+/* Dark card tweaks, side tags, and CTA variants */
+.duo-card .card-media{filter:brightness(0.28) contrast(1.05);}
+.duo-card .duo-overlay{bottom:40px;left:48px;right:48px}
+.duo-side-tag{position:absolute;right:40px;top:40px;color:#3b5a72;font-weight:700;letter-spacing:.12em;font-size:12px}
+.duo-side-tag.right{right:36px}
+
+.duo-cta{border:none;cursor:pointer}
+.duo-cta.primary{background:#fff;color:#111;padding:20px 56px;border-radius:30px;font-size:18px;box-shadow:0 6px 18px rgba(0,0,0,0.35)}
+.duo-cta.primary .arrow{margin-left:12px}
+.duo-cta.outline{background:transparent;border:1px solid rgba(255,255,255,0.06);color:rgba(255,255,255,0.9);padding:18px 44px;border-radius:26px}
+
+/* Make text larger and spaced as in mockup */
+.duo-title{font-size:34px;font-weight:800}
+.duo-sub{font-size:18px;max-width:640px}
+
+@media (max-width: 991.98px){
+  .duo-title{font-size:20px}
+  .duo-sub{font-size:15px}
+  .duo-cta.primary{padding:12px 20px;font-size:16px}
+}
+
+
+
+/* Overlay text for OtherWorks */
+.otherwork-card .card-overlay h4{color:#fff;margin:0;font-size:20px;text-shadow:0 6px 20px rgba(0,0,0,0.5)}
+.otherwork-card .card-overlay .tag{background:rgba(0,0,0,0.45);color:#fff;padding:6px 10px;border-radius:999px;font-size:12px;align-self:flex-start}
+.otherwork-card .card-overlay{pointer-events:none}
+.otherwork-card .card-body p{color:rgba(255,255,255,0.85);margin:0}
