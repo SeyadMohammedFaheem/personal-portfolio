@@ -20,7 +20,7 @@ export default function HeroArea() {
   style={{ maxWidth: "300px" }}
 >
   <p>
-    Hi, I’m Faheem, a passionate UX Designer dedicated to creating
+    Hi, I’m Faheem, passionate in creating
     user-friendly digital experiences.
   </p>
   <a
@@ -41,7 +41,7 @@ export default function HeroArea() {
       className="hero-content wow fadeInUp delay-0-4s"
       style={{ textAlign: "right" }}
     >
-      <p>As a Product Designer, I specialise in:</p>
+      <p>As a Designer, I specialise in:</p>
       <ul style={{ color: "black" }}>
         <li>UI/UX Design & Product Design</li>
         <li>User Research & Analysis</li>

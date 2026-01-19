@@ -38,7 +38,7 @@ export default function BlogArea() {
               </div>
             </div>
 
-            <div className="col-lg-4 mb-4">
+            {/* <div className="col-lg-4 mb-4">
               <div className="blog-card" style={{ cursor: 'pointer' }}>
                 <div className="blog-post-img">
                   <Link to="/blog-post-2">
@@ -60,9 +60,9 @@ export default function BlogArea() {
                   </Link>
                 </div>
               </div>
-            </div>
+            </div> */}
 
-            <div className="col-lg-4 mb-4">
+            {/* <div className="col-lg-4 mb-4">
               <div className="blog-card" style={{ cursor: 'pointer' }}>
                 <div className="blog-post-img">
                   <Link to="/blog-post-3">
@@ -84,7 +84,7 @@ export default function BlogArea() {
                   </Link>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

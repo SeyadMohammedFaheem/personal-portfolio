@@ -13,7 +13,7 @@ export default function OtherWorks() {
     <div className="otherworks-img">
       <a href="/blog-post-1">
         <img
-          src="assets/images/blog/blog1.jpg"
+          src="assets/images/blog/video-editing.gif"
           alt="Video Editing"
         />
       </a>
@@ -38,7 +38,7 @@ export default function OtherWorks() {
     <div className="otherworks-img">
       <a href="/blog-post-1">
         <img
-          src="assets/images/blog/image 90cf.jpg"
+           src="assets/images/blog/graphics.jpg"
           alt="Video Editing"
         />
       </a>
