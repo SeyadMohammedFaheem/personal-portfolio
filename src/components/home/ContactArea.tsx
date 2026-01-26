@@ -64,12 +64,15 @@ export default function ContactArea() {
                 <div className="single-contact wow fadeInUp" data-wow-delay=".2s">
                   <span className="circle-btn"><i className="ri-map-pin-line"></i></span>
                   <h2>My Location:</h2>
-                  <p>Bengaluru, Karnataka, India</p>
+                  <p>Bengaluru, Karnataka, India<br></br>
+                  Riyadh, Saudi Arabia </p>
                 </div>
                 <div className="single-contact wow fadeInUp" data-wow-delay=".4s">
                   <span className="circle-btn"><i className="ri-headphone-line"></i></span>
                   <h2>Contact Number:</h2>
-                  <p>+91 6379439162</p>
+                  <p>India +91 6379439162 <br></br>
+                    Saudi +966 539630501
+                  </p>
                 </div>
                 <div className="single-contact wow fadeInUp" data-wow-delay=".6s">
                   <span className="circle-btn"><i className="ri-mail-line"></i></span>
