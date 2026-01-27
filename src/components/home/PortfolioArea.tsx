@@ -1,112 +1,10 @@
 import { useState } from "react";
 import ImagePopup from "../../modals/ImagePopup";
 import "react-18-image-lightbox/style.css";
+import { Link } from "react-router-dom";
+import { portfolio_data } from "../../data/portfolioData";
 
-import portfolio_img_1 from "../../../public/assets/images/projects/work1.jpg";
-import portfolio_img_2 from "../../../public/assets/images/projects/work2.jpg";
-import portfolio_img_3 from "../../../public/assets/images/projects/work3.jpg";
-import portfolio_img_4 from "../../../public/assets/images/projects/work4.jpg";
-import portfolio_img_5 from "../../../public/assets/images/projects/work5.jpg";
 
-interface MetricType {
-  value: string;
-  label: string;
-}
-
-interface DataType {
-  id: number;
-  col: string;
-  image: string;
-  title: string;
-  category: string;
-  description?: string;
-  year?: string;
-   live?: string
-  metrics?: MetricType[];
-  link?: string; // ✅ Added link
-}
-
-const portfolio_data: DataType[] = [
-  {
-    id: 1,
-    col: "6",
-    image: portfolio_img_1,
-    title: "Pickcel Dashboard Redesign",
-    category: "Dashboard Design",
-    description:
-      "Quick UX improvements that increased clarity for first-time users and boosted engagement.",
-    year: "2025",
-    metrics: [
-      { value: "40%", label: "Faster Onboarding" },
-      { value: "25%", label: "Higher Engagement" },
-    ],
-    link: "https://www.figma.com/proto/9BZN4coiFEEWlCk9zNsZIc/Console-UI-Redesign---Navigation-Optimization?page-id=0%3A1&node-id=0-1827&viewport=138%2C117%2C0.11&t=O2jBYAxOL7NcRWek-1&scaling=contain&content-scaling=fixed",
-      live: "https://console.pickcel.com#/"   // ✅ added live site link
-
-  },
-  {
-    id: 2,
-    col: "6",
-    image: portfolio_img_2,
-    title: "Pickcel GO App Design",
-    category: "UX Case Study",
-    description:
-      "A modular component exploration to speed up design iterations.",
-    year: "2024",
-    metrics: [
-      { value: "3x", label: "Faster Iterations" },
-      { value: "20%", label: "Improved Usability" },
-    ],
-    link: "https://www.figma.com/proto/RJ1wtC2LyGH9TNR1lPzRRi/Portfolio-FInal?page-id=247%3A2463&node-id=247-2464&scaling=min-zoom&content-scaling=fixed&t=zJAFUzafUpJ6HWYV-1&hide-ui=1",
-  },
-  {
-    id: 3,
-    col: "4",
-    image: portfolio_img_3,
-    title: "Website Redesign",
-    category: "Website Study",
-    description:
-      "Motion study highlighting micro-interactions and delight moments.",
-    year: "2025",
-    metrics: [
-      { value: "15%", label: "More Retention" },
-      { value: "30%", label: "Better Conversion" },
-    ],
-    link: "https://faheem.work/projects/website-redesign",
-    live: "https://pickcel.com#/"   // ✅ added live site link
-  },
-  {
-    id: 4,
-    col: "4",
-    image: portfolio_img_4,
-    title: "Octalume - Smart IoT Dashboard",
-    category: "Dashboard Study",
-    description:
-      "Identity refresh exploring typography, color, and layout systems.",
-    year: "2024",
-    metrics: [
-      { value: "50%", label: "UI Consistency" },
-      { value: "18%", label: "Drop in Errors" },
-    ],
-    link: "https://www.behance.net/gallery/213204745/Octalume-Smart-IoT-Dashboard-UIUX-Design",
-    live: "https://seyadmohammedfaheem.github.io/octalume/"   // ✅ added live site link
-  },
-  {
-    id: 5,
-    col: "4",
-    image: portfolio_img_5,
-    title: "Scentropolis Perfume App",
-    category: "App Design",
-    description:
-      "Concept mockups for a data-dense analytics experience.",
-    year: "2024",
-    metrics: [
-      { value: "25%", label: "Faster Load Time" },
-      { value: "10%", label: "Higher Conversion" },
-    ],
-    link: "https://www.behance.net/gallery/181399267/Scentropolis-UIUX-Mobile-App-Perfume-App-Design",
-  },
-];
 
 export default function PortfolioArea() {
   const [photoIndex, setPhotoIndex] = useState<number | null>(null);
@@ -149,10 +47,8 @@ export default function PortfolioArea() {
                   key={i}
                   className={`col-md-6 col-xl-${item.col} portfolio-item category-1`}
                 >
-                  <a
-                    href={item.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link
+                    to={`/projects/${item.id}`}
                     className="work-popup"
                   >
                     <div className="portfolio-box">
@@ -174,7 +70,7 @@ export default function PortfolioArea() {
                         </h1>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               ))}
             </div>
@@ -192,21 +88,13 @@ export default function PortfolioArea() {
                 {/* LEFT IMAGE */}
                 <div className="col-lg-6">
                   <div className="blog-post-img">
-                    <a
-                      href={item.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
+                    <Link to={`/projects/${item.id}`}>
                       <img src={item.image} alt={item.title} />
-                    </a>
+                    </Link>
                     <div className="blog-post-category">
-                      <a
-                        href={item.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
+                      <Link to={`/projects/${item.id}`}>
                         {item.category}
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -216,14 +104,12 @@ export default function PortfolioArea() {
                   <div className="blog-post-caption">
                     <h3>{item.year ? `Posted on ${item.year}` : ""}</h3>
                     <h2>
-                      <a
+                      <Link
                         className="link-decoration"
-                        href={item.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        to={`/projects/${item.id}`}
                       >
                         {item.title}
-                      </a>
+                      </Link>
                     </h2>
                     <p className="case-desc">{item.description}</p>
 
@@ -242,32 +128,30 @@ export default function PortfolioArea() {
                     )} */}
 
                     {/* Button */}
-                    <a
+                    <Link
                       className="theme-btn theme-btn-two"
-                      href={item.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      to={`/projects/${item.id}`}
                     >
                       Read Case study <i className="ri-arrow-right-line"></i>
-                    </a>
-                       {item.live && (
-   <a
-  href={item.live}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="ms-3 theme-btn theme-btn-two"
-  style={{
-    background: "transparent",
-    color: "var(--primary-color)",
-    border: "none",
-    textDecoration: "none",
-  }}
-  onMouseEnter={(e) => (e.currentTarget.style.textDecoration = "underline")}
-  onMouseLeave={(e) => (e.currentTarget.style.textDecoration = "none")}
->
-  View Live Site
-</a>
-  )}
+                    </Link>
+                    {item.live && (
+                      <a
+                        href={item.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="ms-3 theme-btn theme-btn-two"
+                        style={{
+                          background: "transparent",
+                          color: "var(--primary-color)",
+                          border: "none",
+                          textDecoration: "none",
+                        }}
+                        onMouseEnter={(e) => (e.currentTarget.style.textDecoration = "underline")}
+                        onMouseLeave={(e) => (e.currentTarget.style.textDecoration = "none")}
+                      >
+                        View Live Site
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
